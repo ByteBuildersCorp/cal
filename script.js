@@ -24,7 +24,7 @@ function calculateResult() {
     try {
         let input = inputElement.innerText;
         // Replace √ with Math.sqrt and handle other operations
-        input = input.replace(/√/g, 'Math.sqrt');
+        input = input.replace(/√/g, 'Math.sqrt($1)');
         input = input.replace(/%/g, '/100');
         input = input.replace(/±/g, '-');
         let result = eval(input);
